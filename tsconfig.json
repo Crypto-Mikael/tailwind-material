@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "../../dist/packages/boxlink-plugin",
+    "outDir": "./dist",
     "allowJs": true,
     "declaration": true,
     "esModuleInterop": true,
