@@ -1,5 +1,5 @@
 {
-  "name": "@boxlink/hub-plugin",
+  "name": "tailwind-material",
   "version": "0.0.1",
   "main": "src/index.ts",
   "scripts": {
