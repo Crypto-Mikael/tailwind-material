@@ -2,9 +2,6 @@
   "name": "@boxlink/hub-plugin",
   "version": "0.0.1",
   "main": "src/index.ts",
-  "files": [
-    "../../dist/packages/boxlink-plugin"
-  ],
   "scripts": {
     "build:elements:css": "postcss src/elements/index.css -o dist/index.css",
     "build:elements:js": "prejss-cli dist --out-dir src/elements --format commonjs",
