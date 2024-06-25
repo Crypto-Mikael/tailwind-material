@@ -1,0 +1,45 @@
+.hub-navigation-bar {
+  @apply sm:hidden bg-surface-container flex w-screen h-20 gap-4 fixed bottom-0 px-2 pt-4 pb-3 justify-around items-start;
+  a {
+    @apply flex flex-col text-2xl items-center
+    font-['Material_Symbols_Outlined'] rounded-full gap-1
+    px-4
+    text-on-secondary-container
+    hover:bg-secondary-container
+    after:absolute
+    after:bottom-2
+    after:text-on-surface
+    after:text-base
+    after:content-[attr(label)] after:font-Inter;
+    transition: background 0.2s linear;
+  }
+
+  a:active, a:hover {
+    @apply icon-filled;
+  }
+}
+
+.hub-navigation-rail {
+  @apply flex flex-col items-center bg-surface-container w-[var(--md-sys-navigation-rail-width)] h-full fixed left-0 py-5;
+  transition: background 0.2s linear;
+  ul {
+    @apply flex flex-col items-center gap-4 text-center text-on-surface;
+    li {
+      @apply flex flex-col items-center;
+    }
+    p {
+      @apply text-xs not-italic font-medium leading-4 tracking-[0.5px];
+    }
+  }
+
+  a {
+    @apply flex flex-col w-max relative items-center gap-1 hover:bg-secondary-container 
+    font-['Material_Symbols_Outlined'] px-4 py-0.5 rounded-full text-2xl;
+    transition: background 0.2s linear;
+  }
+}
+
+html:has(.hub-navigation-rail) {
+  --md-sys-navigation-rail-width: 88px;
+  @apply pl-[var(--md-sys-navigation-rail-width)];
+}

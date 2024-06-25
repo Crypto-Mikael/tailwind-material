@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hub-input {
+  background: transparent;
+  @apply
+  outline-none placeholder-on-surface 
+  border border-outline
+  text-on-surface
+  focus:border-primary
+  invalid:text-error
+  invalid:border-error
+  disabled:border-outline/[0.12]
+  disabled:text-on-surface/[0.12]
+  rounded 
+  leading-6 
+  pl-4 py-2
+  block;
+}
+
+.hub-input[type="date"] {
+  @apply pr-2;
+}
+
+
+select.hub-input {
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgb(var(--md-sys-color-outline)) 50%),
+    linear-gradient(135deg, rgb(var(--md-sys-color-outline)) 50%, transparent 50%);  
+    background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select.hub-input:focus {
+  background-image:
+    linear-gradient(45deg, rgb(var(--md-sys-color-outline)) 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, rgb(var(--md-sys-color-outline)) 50%);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+
+.hub-input-filled {
+  @apply 
+  outline-none placeholder-on-surface 
+  border-b border-b-outline
+  bg-surface-variant 
+  text-on-surface-variant
+  focus:border-primary
+  invalid:text-error
+  invalid:border-error
+  disabled:border-outline/[0.12]
+  disabled:text-on-surface/[0.12] 
+  leading-6 
+  pl-4 py-2
+  block;
+}
+
+.hub-input-filled + .hub-floating-label {
+  background: linear-gradient(0deg, transparent 0%, transparent 33%, rgb(var(--md-sys-color-surface-variant)) 34%, rgb(var(--md-sys-color-surface-variant)) 38%, transparent 37%, transparent 100%);
+}
+
+.hub-input:has(+ .hub-floating-label) {
+  @apply
+  placeholder-opacity-0
+  placeholder-shown:focus:placeholder-opacity-100;
+}
+
+.hub-input.ng-touched.ng-invalid {
+  @apply border-error;
+}
+
+.hub-input.ng-touched.ng-invalid + .hub-floating-label {
+  @apply text-error;
+}
+
+.hub-input:not(:placeholder-shown) + .hub-floating-label {
+  background: linear-gradient(0deg, transparent 0%, transparent 33%, rgb(var(--md-sys-color-surface-variant)) 34%, rgb(var(--md-sys-color-surface-variant)) 40%, transparent 41%, transparent 100%);
+}
+
+.hub-input:focus + .hub-floating-label {
+  background: linear-gradient(0deg, transparent 0%, transparent 33%, rgb(var(--md-sys-color-surface-variant)) 34%, rgb(var(--md-sys-color-surface-variant)) 40%, transparent 41%, transparent 100%);
+}
+
+.hub-input-wrapper {
+  @apply relative max-w-full;
+}
+
+.hub-input-wrapper > .hub-input {
+  @apply w-full;
+}
+.hub-input-wrapper > .hub-input-filled {
+  @apply w-full;
+}
+
+.hub-floating-label {
+  @apply
+  absolute
+  text-sm
+  transition-all
+  pointer-events-none
+  left-2 px-2
+  -top-3 peer-placeholder-shown:top-2 peer-focus:-top-3
+  peer-focus:text-primary
+  peer-focus:text-sm
+  peer-disabled:text-on-surface/[0.12]
+  peer-invalid:text-error
+  peer-placeholder-shown:text-base;
+}
+
+.hub-input-left-icon {
+  @apply hub-icon-button absolute left-0 ml-1;
+}
+
+.hub-input-right-icon {
+  @apply hub-icon-button absolute top-0 right-0;
+}
+
+.hub-input-wrapper:has(.hub-input-left-icon) {
+  .hub-input {
+    @apply pl-11;
+  }
+  .hub-input-filled {
+    @apply pl-11;
+  }
+  .hub-floating-label {
+    @apply left-[38px];
+  }
+}
+
+.hub-input:required + .hub-floating-label::after {
+  content: '*';
+}
+
+.hub-input.ng-invalid + .hub-floating-label::after {
+  content: '*';
+}
+
+.hub-input {
+  option {
+    background: rgb(var(--md-sys-color-surface));
+  }
+}

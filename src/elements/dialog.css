@@ -1,0 +1,31 @@
+.hub-dialog {
+  @apply bg-surface-container-high text-on-surface elevation-3 p-6 rounded-[28px];
+}
+
+dialog[open] {
+  animation: zoomIn 0.15s ease-in-out normal;
+}
+
+::backdrop {
+  animation: fadeIn 0.15s ease-in-out normal;
+  @apply bg-scrim/[0.32];
+}
+
+@keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+
+
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    transform: rgba(0, 0, 0, 0.2);
+  }
+}

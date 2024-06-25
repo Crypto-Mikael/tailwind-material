@@ -1,0 +1,55 @@
+.hub-drawer-left {
+  @apply h-screen w-80 rounded-r-md m-0 mr-auto bg-surface-container-low max-h-screen p-3 text-on-surface-variant;
+  animation: slideInLeft .3s ease-in-out;
+}
+
+.hub-drawer-left[open] {
+  animation: slideInLeft .3s ease-in-out forwards;
+}
+
+.hub-drawer-right {
+  @apply h-screen w-80 rounded-r-md m-0 ml-auto bg-surface-container-low max-h-screen p-3 text-on-surface-variant;
+  animation: slideInLeft .3s ease-in-out;
+  direction: rtl;
+}
+
+.hub-drawer-right[open] {
+  animation: slideInRight .3s ease-in-out forwards;
+}
+
+.hub-drawer-right > * {
+  direction: ltr;
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-2 bg-surface-container-lowest;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

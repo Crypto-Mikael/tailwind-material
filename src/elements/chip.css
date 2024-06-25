@@ -1,0 +1,25 @@
+.hub-chip-outline {
+  @apply flex max-w-fit cursor-pointer border border-outline-variant select-none px-3 py-1.5 rounded-lg border-solid after:content-[attr(right-icon)] before:content-[attr(left-icon)];
+}
+.hub-chip-outline input[type="checkbox"] {
+  @apply appearance-none h-0 cursor-pointer rounded-[0.15em];
+}
+.hub-chip-outline:has(input[type="checkbox"]:checked) {
+  @apply text-on-secondary-container border-[none] bg-secondary-container;
+}
+.hub-chip-outline:has(input[type="checkbox"]:checked[checked-icon])
+  input[type="checkbox"]::before {
+  @apply content-[attr(checked-icon)] pr-[0.5em] font-['Material_Symbols_Outlined'];
+}
+.hub-chip-outline::after {
+  @apply font-['Material_Symbols_Outlined']
+}
+.hub-chip-outline::before {
+  @apply font-['Material_Symbols_Outlined'];
+}
+.hub-chip-outline[left-icon]::before {
+  @apply pr-[0.5em];
+}
+.hub-chip-outline[right-icon]::after {
+  @apply pl-[0.5em];
+}

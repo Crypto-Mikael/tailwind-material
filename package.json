@@ -1,0 +1,29 @@
+{
+  "name": "@boxlink/hub-plugin",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "files": [
+    "../../dist/packages/boxlink-plugin"
+  ],
+  "scripts": {
+    "build:elements:css": "postcss src/elements/index.css -o dist/index.css",
+    "build:elements:js": "prejss-cli dist --out-dir src/elements --format commonjs",
+    "build": "npm run build:elements:css && npm run build:elements:js && tsc"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@material/material-color-utilities": "^0.2.7",
+    "tailwindcss": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "autoprefixer": "*",
+    "postcss": "*",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.0",
+    "prejss-cli": "^0.3.3"
+  }
+}

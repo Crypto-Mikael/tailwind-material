@@ -1,0 +1,35 @@
+.hub-list {
+  @apply bg-surface;
+  li {
+    @apply pl-4 pr-6 py-3 flex flex-row justify-start items-start 
+    after:content-[attr(right-icon)] after:font-['Material_Symbols_Outlined'] after:text-[24px]
+    before:content-[attr(left-icon)] before:font-['Material_Symbols_Outlined'] before:text-[24px];
+    input[type='checkbox'] {
+      @apply self-start mt-[0.3rem];
+    }
+
+    input[type='radio'] {
+      @apply self-start mt-[0.3rem];
+    }
+  }
+  li[left-icon]::before {
+    @apply pr-4 self-start;
+  }
+
+  li[left-icon] {
+    input[type='checkbox'] {
+      @apply self-start w-7;
+    }
+  }
+
+  li[right-icon]::after {
+    @apply pl-4 self-start;
+  }
+
+  dt {
+    @apply text-on-surface text-base not-italic font-normal leading-6 tracking-[0.5px];
+  }
+  dl {
+    @apply text-on-surface-variant text-sm not-italic font-normal leading-5 tracking-[0.25px];;
+  }
+}

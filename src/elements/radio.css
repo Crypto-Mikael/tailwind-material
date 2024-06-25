@@ -1,0 +1,5 @@
+.hub-radio {
+  @apply 
+  appearance-none w-5 h-5 bg-clip-content rounded-[50%] border-2 border-solid border-on-surface
+  checked:bg-primary enabled:cursor-pointer checked:p-1 checked:border-2 checked:border-solid checked:border-primary;
+}
