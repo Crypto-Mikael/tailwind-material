@@ -1,11 +1,14 @@
 {
-  "name": "tailwind-material",
+  "name": "@boxlink/tailwind-material",
   "version": "0.0.1",
   "main": "src/index.ts",
   "scripts": {
     "build:elements:css": "postcss src/elements/index.css -o dist/index.css",
     "build:elements:js": "prejss-cli dist --out-dir src/elements --format commonjs",
     "build": "npm run build:elements:css && npm run build:elements:js && tsc"
+  },
+  "publishConfig": {
+    "@boxlink:registry": "https://gitlab.hubfloripa.com.br/api/v4/projects/248/packages/npm/"
   },
   "license": "UNLICENSED",
   "private": true,
