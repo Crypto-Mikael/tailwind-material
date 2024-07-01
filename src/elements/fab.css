@@ -1,4 +1,4 @@
-.hub-fab-small {
+.md-fab-small {
   @apply 
   bg-surface-container-high elevation-3 rounded-xl flex items-center h-10 min-w-10
   after:content-[attr(right-label)] before:content-[attr(left-label)]
@@ -8,7 +8,7 @@
   active:bg-surface-container-high;
 }
 
-.hub-fab-small-primary {
+.md-fab-small-primary {
   @apply 
   bg-primary-container elevation-3 rounded-xl flex items-center h-10 min-w-10
   after:content-[attr(right-label)] before:content-[attr(left-label)]
@@ -18,7 +18,7 @@
   active:bg-primary-container;
 }
 
-.hub-fab-small-secondary {
+.md-fab-small-secondary {
   @apply 
   bg-secondary-container elevation-3 rounded-xl flex items-center h-10 min-w-10
   after:content-[attr(right-label)] before:content-[attr(left-label)]
@@ -28,7 +28,7 @@
   active:bg-secondary-container;
 }
 
-.hub-fab-small-tertiary {
+.md-fab-small-tertiary {
   @apply 
   bg-tertiary-container elevation-3 rounded-xl flex items-center h-10 min-w-10
   after:content-[attr(right-label)] before:content-[attr(left-label)]
@@ -38,49 +38,49 @@
   active:bg-tertiary-container;
 }
 
-.hub-fab {
-  @apply p-4 h-14 min-w-14 hub-fab-small;
+.md-fab {
+  @apply p-4 h-14 min-w-14 md-fab-small;
 }
 
-.hub-fab-primary {
-  @apply p-4 h-14 min-w-14 hub-fab-small-primary;
+.md-fab-primary {
+  @apply p-4 h-14 min-w-14 md-fab-small-primary;
 }
 
-.hub-fab-secondary {
-  @apply p-4 h-14 min-w-14 hub-fab-small-secondary;
+.md-fab-secondary {
+  @apply p-4 h-14 min-w-14 md-fab-small-secondary;
 }
 
-.hub-fab-tertiary {
-  @apply p-4 h-14 min-w-14 hub-fab-small-tertiary;
+.md-fab-tertiary {
+  @apply p-4 h-14 min-w-14 md-fab-small-tertiary;
 }
 
-.hub-fab-large {
-  @apply p-[30px] text-[36px] h-24 min-w-24 hub-fab-small;
+.md-fab-large {
+  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small;
 }
 
-.hub-fab-large-primary {
-  @apply p-[30px] text-[36px] h-24 min-w-24 hub-fab-small-primary;
+.md-fab-large-primary {
+  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small-primary;
 }
 
-.hub-fab-large-secondary {
-  @apply p-[30px] text-[36px] h-24 min-w-24 hub-fab-small-secondary;
+.md-fab-large-secondary {
+  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small-secondary;
 }
 
-.hub-fab-large-tertiary {
-  @apply p-[30px] text-[36px] h-24 min-w-24 hub-fab-small-tertiary;
+.md-fab-large-tertiary {
+  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small-tertiary;
 }
 
-.hub-fab-small[left-label]::before {
+.md-fab-small[left-label]::before {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1 w-auto;
   font-family: 'Inter';
 }
  
-.hub-fab-small[right-label]::after {
+.md-fab-small[right-label]::after {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
   font-family: 'Inter';
 }
 
-.hub-fab-small-primary[left-label]::before {
+.md-fab-small-primary[left-label]::before {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1;
   ::before {
     @apply before:pr-3
@@ -88,27 +88,27 @@
   font-family: 'Inter';
 }
 
-.hub-fab-small-primary[right-label]::after {
+.md-fab-small-primary[right-label]::after {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
   font-family: 'Inter';
 }
 
-.hub-fab-small-secondary[left-label]::before {
+.md-fab-small-secondary[left-label]::before {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1;
   font-family: 'Inter';
 }
 
-.hub-fab-small-secondary[right-label]::after {
+.md-fab-small-secondary[right-label]::after {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
   font-family: 'Inter';
 }
 
-.hub-fab-small-tertiary[left-label]::before {
+.md-fab-small-tertiary[left-label]::before {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1;
   font-family: 'Inter';
 }
 
-.hub-fab-small-tertiary[right-label]::after {
+.md-fab-small-tertiary[right-label]::after {
   @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
   font-family: 'Inter';
 }

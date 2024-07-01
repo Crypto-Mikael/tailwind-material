@@ -1,9 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-.hub-input {
+.md-input {
   background: transparent;
   @apply
   outline-none placeholder-on-surface 
@@ -20,12 +15,12 @@
   block;
 }
 
-.hub-input[type="date"] {
+.md-input[type="date"] {
   @apply pr-2;
 }
 
 
-select.hub-input {
+select.md-input {
   background-image:
     linear-gradient(45deg, transparent 50%, rgb(var(--md-sys-color-outline)) 50%),
     linear-gradient(135deg, rgb(var(--md-sys-color-outline)) 50%, transparent 50%);  
@@ -48,7 +43,7 @@ select.hub-input {
   -moz-appearance: none;
 }
 
-select.hub-input:focus {
+select.md-input:focus {
   background-image:
     linear-gradient(45deg, rgb(var(--md-sys-color-outline)) 50%, transparent 50%),
     linear-gradient(135deg, transparent 50%, rgb(var(--md-sys-color-outline)) 50%);
@@ -64,7 +59,7 @@ select.hub-input:focus {
 }
 
 
-.hub-input-filled {
+.md-input-filled {
   @apply 
   outline-none placeholder-on-surface 
   border-b border-b-outline
@@ -80,44 +75,44 @@ select.hub-input:focus {
   block;
 }
 
-.hub-input-filled + .hub-floating-label {
+.md-input-filled + .md-floating-label {
   background: linear-gradient(0deg, transparent 0%, transparent 33%, rgb(var(--md-sys-color-surface-variant)) 34%, rgb(var(--md-sys-color-surface-variant)) 38%, transparent 37%, transparent 100%);
 }
 
-.hub-input:has(+ .hub-floating-label) {
+.md-input:has(+ .md-floating-label) {
   @apply
   placeholder-opacity-0
   placeholder-shown:focus:placeholder-opacity-100;
 }
 
-.hub-input.ng-touched.ng-invalid {
+.md-input.ng-touched.ng-invalid {
   @apply border-error;
 }
 
-.hub-input.ng-touched.ng-invalid + .hub-floating-label {
+.md-input.ng-touched.ng-invalid + .md-floating-label {
   @apply text-error;
 }
 
-.hub-input:not(:placeholder-shown) + .hub-floating-label {
+.md-input:not(:placeholder-shown) + .md-floating-label {
   background: linear-gradient(0deg, transparent 0%, transparent 33%, rgb(var(--md-sys-color-surface-variant)) 34%, rgb(var(--md-sys-color-surface-variant)) 40%, transparent 41%, transparent 100%);
 }
 
-.hub-input:focus + .hub-floating-label {
+.md-input:focus + .md-floating-label {
   background: linear-gradient(0deg, transparent 0%, transparent 33%, rgb(var(--md-sys-color-surface-variant)) 34%, rgb(var(--md-sys-color-surface-variant)) 40%, transparent 41%, transparent 100%);
 }
 
-.hub-input-wrapper {
+.md-input-wrapper {
   @apply relative max-w-full;
 }
 
-.hub-input-wrapper > .hub-input {
+.md-input-wrapper > .md-input {
   @apply w-full;
 }
-.hub-input-wrapper > .hub-input-filled {
+.md-input-wrapper > .md-input-filled {
   @apply w-full;
 }
 
-.hub-floating-label {
+.md-floating-label {
   @apply
   absolute
   text-sm
@@ -132,35 +127,35 @@ select.hub-input:focus {
   peer-placeholder-shown:text-base;
 }
 
-.hub-input-left-icon {
-  @apply hub-icon-button absolute left-0 ml-1;
+.md-input-left-icon {
+  @apply md-icon-button absolute left-0 ml-1;
 }
 
-.hub-input-right-icon {
-  @apply hub-icon-button absolute top-0 right-0;
+.md-input-right-icon {
+  @apply md-icon-button absolute top-0 right-0;
 }
 
-.hub-input-wrapper:has(.hub-input-left-icon) {
-  .hub-input {
+.md-input-wrapper:has(.md-input-left-icon) {
+  .md-input {
     @apply pl-11;
   }
-  .hub-input-filled {
+  .md-input-filled {
     @apply pl-11;
   }
-  .hub-floating-label {
+  .md-floating-label {
     @apply left-[38px];
   }
 }
 
-.hub-input:required + .hub-floating-label::after {
+.md-input:required + .md-floating-label::after {
   content: '*';
 }
 
-.hub-input.ng-invalid + .hub-floating-label::after {
+.md-input.ng-invalid + .md-floating-label::after {
   content: '*';
 }
 
-.hub-input {
+.md-input {
   option {
     background: rgb(var(--md-sys-color-surface));
   }

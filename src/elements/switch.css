@@ -1,4 +1,4 @@
-.hub-switch:where([type="checkbox"]) {
+.md-switch:where([type="checkbox"]) {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -17,11 +17,11 @@
   cursor: pointer;
 }
 
-.hub-switch:where([type="checkbox"]):checked {
+.md-switch:where([type="checkbox"]):checked {
   background: rgb(var(--md-sys-color-primary));
 }
 
-.hub-switch:where([type="checkbox"])::before {
+.md-switch:where([type="checkbox"])::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -36,7 +36,7 @@
   transition: left 0.2s 0.1s, height 0.2s 0.2s, width 0.2s 0.2s;
 }
 
-.hub-switch:where([type="checkbox"]):checked::before {
+.md-switch:where([type="checkbox"]):checked::before {
   left: 2.1em;
   width: 1.6em;
   margin: 0 0.15em;
@@ -44,6 +44,6 @@
   background: rgb(var(--md-sys-color-on-primary));
 }
 
-.hub-switch:where([type="checkbox"]):disabled {
+.md-switch:where([type="checkbox"]):disabled {
   opacity: 0.4;
 }

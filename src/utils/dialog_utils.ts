@@ -1,8 +1,13 @@
 import { HubButtonType } from '../types';
 
 export type ICON_COLOR = string;
-export type DIALOG_ICON = 'warning' | 'error' | 'check_circle' | 'help' | string;
-export type ICON_HERO_DIALOG ={
+export type DIALOG_ICON =
+  | 'warning'
+  | 'error'
+  | 'check_circle'
+  | 'help'
+  | string;
+export type ICON_HERO_DIALOG = {
   /** This is the hero icon on top of the modal */
   icon?: DIALOG_ICON;
   iconColor?: ICON_COLOR;
@@ -11,29 +16,30 @@ export type ICON_HERO_DIALOG ={
 export type BASIC_DIALOG = {
   /** This is the header to the modal */
   title: string;
-   /** This is the body text to the modal */
+  /** This is the body text to the modal */
   article: string;
   width?: `${number}px` | `${number}rem`;
-}
+};
 
 export type SUCCESS_DIALOG = ICON_HERO_DIALOG & {
   /** This is the header to the modal */
-  title?: typeof SUCCESS_TITLE[keyof typeof SUCCESS_TITLE];
+  title?: (typeof SUCCESS_TITLE)[keyof typeof SUCCESS_TITLE];
   /** This is the body text to the modal */
   article: string;
   width?: `${number}px` | `${number}rem`;
-}
+};
 
 export type ERROR_DIALOG = ICON_HERO_DIALOG & {
   /** This is the header to the modal */
-  title?: typeof ERROR_TITLE[keyof typeof ERROR_TITLE];
+  title?: (typeof ERROR_TITLE)[keyof typeof ERROR_TITLE];
   /** This is the body text to the modal */
   article: string;
   width?: `${number}px` | `${number}rem`;
-}
+};
 
-export type SUCCESS_TITLE_TYPE = typeof SUCCESS_TITLE[keyof typeof SUCCESS_TITLE];
-export type ERROR_TITLE_TYPE = typeof ERROR_TITLE[keyof typeof ERROR_TITLE];
+export type SUCCESS_TITLE_TYPE =
+  (typeof SUCCESS_TITLE)[keyof typeof SUCCESS_TITLE];
+export type ERROR_TITLE_TYPE = (typeof ERROR_TITLE)[keyof typeof ERROR_TITLE];
 
 const SUCCESS_TITLE = {
   'pt-BR': 'Sucesso!',
@@ -50,24 +56,30 @@ export class HubDialog {
     return new Promise((resolve) => {
       const dialog = this.successDialog(props);
       dialog.showModal();
-        setTimeout(() => {
-          resolve(true);
-          dialog.close() 
-        }, 4000);
-      });
+      setTimeout(() => {
+        resolve(true);
+        dialog.close();
+      }, 4000);
+    });
   }
 
-  public static showSuccessDialog(props: SUCCESS_DIALOG  & { buttonText?: string }) {
+  public static showSuccessDialog(
+    props: SUCCESS_DIALOG & { buttonText?: string }
+  ) {
     return new Promise((resolve) => {
       const dialog = this.successDialog(props);
       dialog.showModal();
-      const button = this.appendButtonElement(dialog, props.buttonText, 'hub-button-filled');
+      const button = this.appendButtonElement(
+        dialog,
+        props.buttonText,
+        'md-button-filled'
+      );
       button.style.width = '100%';
       button.onclick = () => {
         resolve(true);
         dialog.close();
-      }
-    })
+      };
+    });
   }
 
   public static showTimedErrorDialog(props: ERROR_DIALOG) {
@@ -76,7 +88,7 @@ export class HubDialog {
       dialog.showModal();
       setTimeout(() => {
         resolve(false);
-        dialog.close()
+        dialog.close();
       }, 1522000);
     });
   }
@@ -85,7 +97,11 @@ export class HubDialog {
     return new Promise((resolve) => {
       const dialog = this.errorDialog(props);
       dialog.showModal();
-      const button = this.appendButtonElement(dialog, props.buttonText, 'hub-button-outlined');
+      const button = this.appendButtonElement(
+        dialog,
+        props.buttonText,
+        'md-button-outlined'
+      );
       button.style.width = '100%';
       button.onclick = () => {
         resolve(false);
@@ -94,7 +110,10 @@ export class HubDialog {
     });
   }
 
-  public static showTwoButtonOptionsDialog(props: ICON_HERO_DIALOG & BASIC_DIALOG & { confirmButtonText?: string, cancelButtonText?: string }) {
+  public static showTwoButtonOptionsDialog(
+    props: ICON_HERO_DIALOG &
+      BASIC_DIALOG & { confirmButtonText?: string; cancelButtonText?: string }
+  ) {
     return new Promise((resolve) => {
       const dialog = this.dialogWithHeroIcon(props, '4rem');
       dialog.showModal();
@@ -102,18 +121,26 @@ export class HubDialog {
       actions.className = 'flex gap-4';
       dialog.appendChild(actions);
 
-      const cancelButton = this.appendButtonElement(actions, props.cancelButtonText ?? 'NÃO', 'hub-button-outlined');
+      const cancelButton = this.appendButtonElement(
+        actions,
+        props.cancelButtonText ?? 'NÃO',
+        'md-button-outlined'
+      );
       cancelButton.style.width = '100%';
       cancelButton.onclick = () => {
         resolve(false);
         dialog.close();
       };
 
-      const confirmButton = this.appendButtonElement(actions, props.confirmButtonText ?? 'SIM', 'hub-button-filled');
-        confirmButton.style.width = '100%';
-        confirmButton.onclick = () => {
-          resolve(true);
-          dialog.close();
+      const confirmButton = this.appendButtonElement(
+        actions,
+        props.confirmButtonText ?? 'SIM',
+        'md-button-filled'
+      );
+      confirmButton.style.width = '100%';
+      confirmButton.onclick = () => {
+        resolve(true);
+        dialog.close();
       };
     });
   }
@@ -134,7 +161,6 @@ export class HubDialog {
     return dialog;
   }
 
-
   private static errorDialog(props: ERROR_DIALOG) {
     const language = navigator.language as keyof typeof ERROR_TITLE;
     props.title = props.title ?? ERROR_TITLE[language];
@@ -144,16 +170,23 @@ export class HubDialog {
     return dialog;
   }
 
-  private static dialogWithHeroIcon(props: ICON_HERO_DIALOG, iconSize: `${number}px` | `${number}rem`) {
+  private static dialogWithHeroIcon(
+    props: ICON_HERO_DIALOG,
+    iconSize: `${number}px` | `${number}rem`
+  ) {
     const dialog = this.basicDialog(props as BASIC_DIALOG);
     const div = dialog.querySelector('div') as HTMLDivElement;
-    const span = this.apppendMaterialHeroIconElement(div, props.icon, props.iconColor);
+    const span = this.apppendMaterialHeroIconElement(
+      div,
+      props.icon,
+      props.iconColor
+    );
     span.style.fontSize = iconSize;
     span.style.display = 'flex';
     span.style.flexDirection = 'column';
     span.style.justifyContent = 'center';
     span.style.height = iconSize;
-    return dialog
+    return dialog;
   }
 
   private static basicDialog(props: BASIC_DIALOG) {
@@ -171,13 +204,17 @@ export class HubDialog {
     this.apppendHeadingElement(header, props.title);
 
     this.apppendArticleElement(div2, props.article);
-    dialog.onclose = () => { dialog.remove() }
+    dialog.onclose = () => {
+      dialog.remove();
+    };
     return dialog;
   }
 
-  private static createElementDialog(width: `${number}px` | `${number}rem` | 'min-content' = 'min-content') {
+  private static createElementDialog(
+    width: `${number}px` | `${number}rem` | 'min-content' = 'min-content'
+  ) {
     const dialog = document.createElement('dialog') as HTMLDialogElement;
-    const className = `hub-dialog transition ease-in-out`;
+    const className = `md-dialog transition ease-in-out`;
     dialog.style.width = width;
     dialog.style.minWidth = '300px';
     document.body.appendChild(dialog);
@@ -200,7 +237,10 @@ export class HubDialog {
     return article;
   }
 
-  private static apppendHeadingElement(element: HTMLElement, innerText: string) {
+  private static apppendHeadingElement(
+    element: HTMLElement,
+    innerText: string
+  ) {
     const heading = document.createElement('h1');
     heading.className = 'text-2xl';
     heading.innerText = innerText;
@@ -208,7 +248,11 @@ export class HubDialog {
     return heading;
   }
 
-  private static apppendMaterialHeroIconElement(element: HTMLElement, innerText: DIALOG_ICON = 'help', iconColor: ICON_COLOR = 'text-primary') {
+  private static apppendMaterialHeroIconElement(
+    element: HTMLElement,
+    innerText: DIALOG_ICON = 'help',
+    iconColor: ICON_COLOR = 'text-primary'
+  ) {
     const span = document.createElement('span');
     span.className = `font-['Material_Symbols_Outlined'] flex self-center text-sm`;
     span.classList.add(iconColor);
@@ -217,7 +261,11 @@ export class HubDialog {
     return span;
   }
 
-  private static appendButtonElement(element: HTMLElement, innerText = 'OK', buttonType: HubButtonType = 'hub-button') {
+  private static appendButtonElement(
+    element: HTMLElement,
+    innerText = 'OK',
+    buttonType: HubButtonType = 'md-button'
+  ) {
     const button = document.createElement('button') as HTMLButtonElement;
     button.className = 'self-end mt-4';
     button.classList.add(buttonType);

@@ -1,7 +1,7 @@
-.hub-checkbox {
+.md-checkbox {
   @apply accent-primary disabled:accent-on-surface w-4 h-4 cursor-pointer rounded-sm disabled:cursor-not-allowed;
 }
 
-label:has(.hub-checkbox) {
+label:has(.md-checkbox) {
   @apply flex flex-row items-center;
 }

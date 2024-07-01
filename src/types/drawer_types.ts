@@ -1,2 +1,2 @@
-export const HubDrawerType = ['hub-drawer-left', 'hub-drawer-right'] as const;
-export type HubDrawerType = typeof HubDrawerType[number];
+export const MdDrawerType = ['md-drawer-left', 'md-drawer-right'] as const;
+export type MdDrawerType = (typeof MdDrawerType)[number];

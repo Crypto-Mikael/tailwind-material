@@ -1,2 +1,2 @@
-export const HubListType = ['hub-list'] as const;
-export type HubListType = typeof HubListType[number];
+export const MdListType = ['md-list'] as const;
+export type MdListType = (typeof MdListType)[number];

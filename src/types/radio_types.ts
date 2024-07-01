@@ -1,2 +1,2 @@
-export const HubRadioType = ['hub-radio'] as const;
-export type HubRadioType = typeof HubRadioType[number];
+export const MdRadioType = ['md-radio'] as const;
+export type MdRadioType = (typeof MdRadioType)[number];

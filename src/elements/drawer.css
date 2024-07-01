@@ -1,23 +1,23 @@
-.hub-drawer-left {
+.md-drawer-left {
   @apply h-screen w-80 rounded-r-md m-0 mr-auto bg-surface-container-low max-h-screen p-3 text-on-surface-variant;
   animation: slideInLeft .3s ease-in-out;
 }
 
-.hub-drawer-left[open] {
+.md-drawer-left[open] {
   animation: slideInLeft .3s ease-in-out forwards;
 }
 
-.hub-drawer-right {
+.md-drawer-right {
   @apply h-screen w-80 rounded-r-md m-0 ml-auto bg-surface-container-low max-h-screen p-3 text-on-surface-variant;
   animation: slideInLeft .3s ease-in-out;
   direction: rtl;
 }
 
-.hub-drawer-right[open] {
+.md-drawer-right[open] {
   animation: slideInRight .3s ease-in-out forwards;
 }
 
-.hub-drawer-right > * {
+.md-drawer-right > * {
   direction: ltr;
 }
 

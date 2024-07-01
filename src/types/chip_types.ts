@@ -1,2 +1,2 @@
-export const HubChipType = ['hub-chip-outline'] as const;
-export type HubChipType = typeof HubChipType[number];
+export const MdChipType = ['md-chip-outline'] as const;
+export type MdChipType = (typeof MdChipType)[number];

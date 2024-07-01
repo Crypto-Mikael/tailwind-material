@@ -1,12 +1,12 @@
-export const HubButtonType = [
-  'hub-button',
-  'hub-button-elevated',
-  'hub-button-filled',
-  'hub-button-outlined',
-  'hub-button-tonal',
-  'hub-icon-button',
-  'hub-icon-button-filled',
-  'hub-icon-button-outlined',
-  'hub-icon-button-tonal',
+export const MdButtonType = [
+  'md-button',
+  'md-button-elevated',
+  'md-button-filled',
+  'md-button-outlined',
+  'md-button-tonal',
+  'md-icon-button',
+  'md-icon-button-filled',
+  'md-icon-button-outlined',
+  'md-icon-button-tonal',
 ] as const;
-export type HubButtonType = typeof HubButtonType[number];
+export type HubButtonType = (typeof MdButtonType)[number];

@@ -1,2 +1,6 @@
-export const HubCardType = ['hub-card-elevated', 'hub-card-filled', 'hub-card-outlined'] as const;
-export type HubCardType = typeof HubCardType[number];
+export const MdCardType = [
+  'md-card-elevated',
+  'md-card-filled',
+  'md-card-outlined',
+] as const;
+export type HubCardType = (typeof MdCardType)[number];

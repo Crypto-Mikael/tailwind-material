@@ -1,11 +1,11 @@
-.hub-card-elevated {
+.md-card-elevated {
   @apply bg-gradient-to-b from-surface-container-low/[0.05] to-surface-container-low/[0.05] rounded-[10px] elevation-2;
 }
 
-.hub-card-filled {
+.md-card-filled {
   @apply bg-surface-container-highest rounded-[10px];
 }
 
-.hub-card-outlined {
+.md-card-outlined {
   @apply bg-surface border-outline-variant border-[1px] rounded-[10px];
 }

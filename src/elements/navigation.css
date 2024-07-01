@@ -1,4 +1,4 @@
-.hub-navigation-bar {
+.md-navigation-bar {
   @apply sm:hidden bg-surface-container flex w-screen h-20 gap-4 fixed bottom-0 px-2 pt-4 pb-3 justify-around items-start;
   a {
     @apply flex flex-col text-2xl items-center
@@ -19,7 +19,7 @@
   }
 }
 
-.hub-navigation-rail {
+.md-navigation-rail {
   @apply flex flex-col items-center bg-surface-container w-[var(--md-sys-navigation-rail-width)] h-full fixed left-0 py-5;
   transition: background 0.2s linear;
   ul {
@@ -39,7 +39,7 @@
   }
 }
 
-html:has(.hub-navigation-rail) {
+html:has(.md-navigation-rail) {
   --md-sys-navigation-rail-width: 88px;
   @apply pl-[var(--md-sys-navigation-rail-width)];
 }

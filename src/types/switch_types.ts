@@ -1,2 +1,2 @@
-export const HubSwitchType = ['hub-switch'] as const;
-export type HubSwitchType = typeof HubSwitchType[number];
+export const MdSwitchType = ['md-switch'] as const;
+export type HubSwitchType = (typeof MdSwitchType)[number];

@@ -1,4 +1,4 @@
-.hub-list {
+.md-list {
   @apply bg-surface;
   li {
     @apply pl-4 pr-6 py-3 flex flex-row justify-start items-start 

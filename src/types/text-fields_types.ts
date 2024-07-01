@@ -1,4 +1,7 @@
-export const HubTextFieldsType = ['hub-input', 'hub-input-filled'] as const;
-export type HubTextFieldsType = typeof HubTextFieldsType[number];
-export const HubInputButtonTypes = ['hub-input-right-icon', 'hub-input-left-icon'] as const;
-export type HubInputButtonTypes = typeof HubInputButtonTypes[number];
+export const MdTextFieldsType = ['md-input', 'md-input-filled'] as const;
+export type MdTextFieldsType = (typeof MdTextFieldsType)[number];
+export const MdInputButtonTypes = [
+  'md-input-right-icon',
+  'md-input-left-icon',
+] as const;
+export type MdInputButtonTypes = (typeof MdInputButtonTypes)[number];

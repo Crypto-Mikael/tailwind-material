@@ -1,7 +1,7 @@
-.hub-badge {
+.md-badge {
   @apply bg-error text-on-error max-h-4 text-center font-medium leading-4 inline-flex flex-col items-center gap-2.5 text-[11px] not-italic tracking-[0.5px] px-1 py-0 rounded-[100px];
 }
 
-.hub-badge-small {
+.md-badge-small {
   @apply bg-error text-on-error w-1.5 h-1.5 rounded-[100px];
 }
