@@ -1,4 +1,4 @@
-import { HubButtonType } from '../types';
+import { MdButtonType } from '../types';
 
 export type ICON_COLOR = string;
 export type DIALOG_ICON =
@@ -51,7 +51,7 @@ const ERROR_TITLE = {
   'en-US': 'Error!',
 } as const;
 
-export class HubDialog {
+export class MdDialog {
   public static showTimedSuccessDialog(props: SUCCESS_DIALOG) {
     return new Promise((resolve) => {
       const dialog = this.successDialog(props);
@@ -264,7 +264,7 @@ export class HubDialog {
   private static appendButtonElement(
     element: HTMLElement,
     innerText = 'OK',
-    buttonType: HubButtonType = 'md-button'
+    buttonType: MdButtonType = 'md-button'
   ) {
     const button = document.createElement('button') as HTMLButtonElement;
     button.className = 'self-end mt-4';

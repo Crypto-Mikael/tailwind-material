@@ -1,6 +1,6 @@
 {
   "name": "tailwind-material",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "files": ["dist/*"],
   "scripts": {

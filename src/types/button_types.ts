@@ -9,4 +9,4 @@ export const MdButtonType = [
   'md-icon-button-outlined',
   'md-icon-button-tonal',
 ] as const;
-export type HubButtonType = (typeof MdButtonType)[number];
+export type MdButtonType = (typeof MdButtonType)[number];
