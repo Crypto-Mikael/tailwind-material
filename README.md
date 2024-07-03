@@ -30,6 +30,6 @@ type InitialPalletColorInHex = {
 
 ## How to use:
 
-![GIF](https://pouch.jumpshare.com/preview/cFhBxHzd32l_8k03nsXRqJafc2y08eoCO3JSp7OWrRZeHw2BncPVdJWYrdaKzHidnjBfHdo_Zl1zFpdePUJOw1O5a4r-OC2jaPk5Z94mY3c)
+![GIF](https://i.ibb.co/tC1WvmD/Anima-o3.gif)
 
 The library also has basic styled elements and utils as dialogs and support to dark and light theme.
