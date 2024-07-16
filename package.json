@@ -1,10 +1,10 @@
 {
   "name": "tailwind-material",
   "version": "0.0.9",
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
-  "files": ["dist"],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist/src"],
   "scripts": {
     "build:elements:css": "postcss src/elements/index.css -o dist/index.css",
     "build:elements:js": "prejss-cli dist --out-dir src/elements --format commonjs",

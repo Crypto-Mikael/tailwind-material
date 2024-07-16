@@ -6,5 +6,6 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
   },
+  "include": ["src/**/*"],
   "exclude": ["dist", "build", "node_modules"],
 }
