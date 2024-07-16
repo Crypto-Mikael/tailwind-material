@@ -11,7 +11,7 @@
   disabled:text-on-surface/[0.12]
   rounded 
   leading-6 
-  pl-4 py-2
+  pl-4 py-2 pr-10
   block;
 }
 
