@@ -79,5 +79,5 @@ export default plugin.withOptions<CorePaletteColorsInHex>(
   }
 );
 
-export * as types from "./types";
-export * as utils from "./utils";
+export * from "./types";
+export * from "./utils";
