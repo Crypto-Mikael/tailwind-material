@@ -11,7 +11,7 @@
   disabled:text-on-surface/[0.12]
   rounded 
   leading-6 
-  pl-4 py-2 pr-10
+  pl-4 py-2
   block;
 }
 
@@ -21,6 +21,7 @@
 
 
 select.md-input {
+  @apply pr-10;
   background-image:
     linear-gradient(45deg, transparent 50%, rgb(var(--md-sys-color-outline)) 50%),
     linear-gradient(135deg, rgb(var(--md-sys-color-outline)) 50%, transparent 50%);  
