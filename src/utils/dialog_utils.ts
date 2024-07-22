@@ -1,11 +1,11 @@
-import { MdButtonType } from '../types';
+import { MdButtonType } from "../types";
 
 export type ICON_COLOR = string;
 export type DIALOG_ICON =
-  | 'warning'
-  | 'error'
-  | 'check_circle'
-  | 'help'
+  | "warning"
+  | "error"
+  | "check_circle"
+  | "help"
   | string;
 export type ICON_HERO_DIALOG = {
   /** This is the hero icon on top of the modal */
@@ -42,13 +42,13 @@ export type SUCCESS_TITLE_TYPE =
 export type ERROR_TITLE_TYPE = (typeof ERROR_TITLE)[keyof typeof ERROR_TITLE];
 
 const SUCCESS_TITLE = {
-  'pt-BR': 'Sucesso!',
-  'en-US': 'Success!',
+  "pt-BR": "Sucesso !",
+  "en-US": "Success !",
 } as const;
 
 const ERROR_TITLE = {
-  'pt-BR': 'Erro!',
-  'en-US': 'Error!',
+  "pt-BR": "Erro !",
+  "en-US": "Error !",
 } as const;
 
 export class MdDialog {
@@ -72,9 +72,9 @@ export class MdDialog {
       const button = this.appendButtonElement(
         dialog,
         props.buttonText,
-        'md-button-filled'
+        "md-button-filled"
       );
-      button.style.width = '100%';
+      button.style.width = "100%";
       button.onclick = () => {
         resolve(true);
         dialog.close();
@@ -100,9 +100,9 @@ export class MdDialog {
       const button = this.appendButtonElement(
         dialog,
         props.buttonText,
-        'md-button-outlined'
+        "md-button-outlined"
       );
-      button.style.width = '100%';
+      button.style.width = "100%";
       button.onclick = () => {
         resolve(false);
         dialog.close();
@@ -115,18 +115,18 @@ export class MdDialog {
       BASIC_DIALOG & { confirmButtonText?: string; cancelButtonText?: string }
   ) {
     return new Promise((resolve) => {
-      const dialog = this.dialogWithHeroIcon(props, '4rem');
+      const dialog = this.dialogWithHeroIcon(props, "4rem");
       dialog.showModal();
-      const actions = document.createElement('div');
-      actions.className = 'flex gap-4';
+      const actions = document.createElement("div");
+      actions.className = "flex gap-4";
       dialog.appendChild(actions);
 
       const cancelButton = this.appendButtonElement(
         actions,
-        props.cancelButtonText ?? 'NÃO',
-        'md-button-outlined'
+        props.cancelButtonText ?? "NÃO",
+        "md-button-outlined"
       );
-      cancelButton.style.width = '100%';
+      cancelButton.style.width = "100%";
       cancelButton.onclick = () => {
         resolve(false);
         dialog.close();
@@ -134,10 +134,10 @@ export class MdDialog {
 
       const confirmButton = this.appendButtonElement(
         actions,
-        props.confirmButtonText ?? 'SIM',
-        'md-button-filled'
+        props.confirmButtonText ?? "SIM",
+        "md-button-filled"
       );
-      confirmButton.style.width = '100%';
+      confirmButton.style.width = "100%";
       confirmButton.onclick = () => {
         resolve(true);
         dialog.close();
@@ -155,18 +155,18 @@ export class MdDialog {
   private static successDialog(props: SUCCESS_DIALOG) {
     const language = navigator.language as keyof typeof SUCCESS_TITLE;
     props.title = props.title ?? SUCCESS_TITLE[language];
-    props.icon = props.icon ?? 'check_circle';
-    props.iconColor = props.iconColor ?? 'text-primary';
-    const dialog = this.dialogWithHeroIcon(props, '4rem');
+    props.icon = props.icon ?? "check_circle";
+    props.iconColor = props.iconColor ?? "text-primary";
+    const dialog = this.dialogWithHeroIcon(props, "4rem");
     return dialog;
   }
 
   private static errorDialog(props: ERROR_DIALOG) {
     const language = navigator.language as keyof typeof ERROR_TITLE;
     props.title = props.title ?? ERROR_TITLE[language];
-    props.icon = props.icon ?? 'error';
-    props.iconColor = props.iconColor ?? 'text-error';
-    const dialog = this.dialogWithHeroIcon(props, '4rem');
+    props.icon = props.icon ?? "error";
+    props.iconColor = props.iconColor ?? "text-error";
+    const dialog = this.dialogWithHeroIcon(props, "4rem");
     return dialog;
   }
 
@@ -175,30 +175,30 @@ export class MdDialog {
     iconSize: `${number}px` | `${number}rem`
   ) {
     const dialog = this.basicDialog(props as BASIC_DIALOG);
-    const div = dialog.querySelector('div') as HTMLDivElement;
+    const div = dialog.querySelector("div") as HTMLDivElement;
     const span = this.apppendMaterialHeroIconElement(
       div,
       props.icon,
       props.iconColor
     );
     span.style.fontSize = iconSize;
-    span.style.display = 'flex';
-    span.style.flexDirection = 'column';
-    span.style.justifyContent = 'center';
+    span.style.display = "flex";
+    span.style.flexDirection = "column";
+    span.style.justifyContent = "center";
     span.style.height = iconSize;
     return dialog;
   }
 
   private static basicDialog(props: BASIC_DIALOG) {
     const dialog = this.createElementDialog(props.width);
-    dialog.style.display = 'flex';
-    dialog.style.flexDirection = 'column';
-    dialog.style.justifyContent = 'space-between';
-    const div = document.createElement('div');
-    div.className = 'flex flex-col gap-4 grow items-center';
+    dialog.style.display = "flex";
+    dialog.style.flexDirection = "column";
+    dialog.style.justifyContent = "space-between";
+    const div = document.createElement("div");
+    div.className = "flex flex-col gap-4 grow items-center";
     dialog.appendChild(div);
-    const div2 = document.createElement('div');
-    div2.className = 'flex flex-col grow items-center w-max';
+    const div2 = document.createElement("div");
+    div2.className = "flex flex-col grow items-center w-max";
     div.appendChild(div2);
     const header = this.apppendHeaderElement(div2);
     this.apppendHeadingElement(header, props.title);
@@ -211,27 +211,28 @@ export class MdDialog {
   }
 
   private static createElementDialog(
-    width: `${number}px` | `${number}rem` | 'min-content' = 'min-content'
+    width: `${number}px` | `${number}rem` | "min-content" = "min-content"
   ) {
-    const dialog = document.createElement('dialog') as HTMLDialogElement;
+    const dialog = document.createElement("dialog") as HTMLDialogElement;
     const className = `md-dialog transition ease-in-out`;
     dialog.style.width = width;
-    dialog.style.minWidth = '300px';
+    dialog.style.minWidth = "300px";
     document.body.appendChild(dialog);
     dialog.className = className;
     return dialog;
   }
 
   private static apppendHeaderElement(dialog: HTMLElement) {
-    const header = document.createElement('header') as HTMLHeadingElement;
-    header.className = 'flex justify-between self-center w-max';
+    const header = document.createElement("header") as HTMLHeadingElement;
+    header.className = "flex justify-between self-center w-max";
     dialog.appendChild(header);
     return header;
   }
 
   private static apppendArticleElement(dialog: HTMLElement, innerText: string) {
-    const article = document.createElement('article') as HTMLElement;
-    article.className = 'flex text-on-surface-variant min-h-[80px]';
+    const article = document.createElement("article") as HTMLElement;
+    article.className =
+      "flex text-on-surface-variant min-h-[80px] max-w-screen-sm";
     article.innerText = innerText;
     dialog.appendChild(article);
     return article;
@@ -241,8 +242,8 @@ export class MdDialog {
     element: HTMLElement,
     innerText: string
   ) {
-    const heading = document.createElement('h1');
-    heading.className = 'text-2xl';
+    const heading = document.createElement("h1");
+    heading.className = "text-2xl";
     heading.innerText = innerText;
     element.appendChild(heading);
     return heading;
@@ -250,10 +251,10 @@ export class MdDialog {
 
   private static apppendMaterialHeroIconElement(
     element: HTMLElement,
-    innerText: DIALOG_ICON = 'help',
-    iconColor: ICON_COLOR = 'text-primary'
+    innerText: DIALOG_ICON = "help",
+    iconColor: ICON_COLOR = "text-primary"
   ) {
-    const span = document.createElement('span');
+    const span = document.createElement("span");
     span.className = `font-['Material_Symbols_Outlined'] flex self-center text-sm`;
     span.classList.add(iconColor);
     span.innerText = innerText;
@@ -263,11 +264,11 @@ export class MdDialog {
 
   private static appendButtonElement(
     element: HTMLElement,
-    innerText = 'OK',
-    buttonType: MdButtonType = 'md-button'
+    innerText = "OK",
+    buttonType: MdButtonType = "md-button"
   ) {
-    const button = document.createElement('button') as HTMLButtonElement;
-    button.className = 'self-end mt-4';
+    const button = document.createElement("button") as HTMLButtonElement;
+    button.className = "self-end mt-4";
     button.classList.add(buttonType);
     button.innerHTML = innerText;
     element.appendChild(button);
