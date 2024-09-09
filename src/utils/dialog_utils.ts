@@ -231,8 +231,8 @@ export class MdDialog {
 
   private static apppendArticleElement(dialog: HTMLElement, innerText: string) {
     const article = document.createElement("article") as HTMLElement;
-    article.className =
-      "flex text-on-surface-variant min-h-[80px] max-w-screen-sm";
+    article.className = "flex text-on-surface-variant min-h-[80px]";
+    article.style.width = "65ch";
     article.innerText = innerText;
     dialog.appendChild(article);
     return article;
