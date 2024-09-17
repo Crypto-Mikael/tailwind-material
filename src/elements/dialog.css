@@ -1,7 +1,3 @@
-.md-dialog {
-  @apply bg-surface-container-high text-on-surface elevation-3 p-6 rounded-[28px];
-}
-
 dialog[open] {
   animation: zoomIn 0.15s ease-in-out normal;
 }

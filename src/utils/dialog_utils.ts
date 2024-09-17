@@ -214,7 +214,7 @@ export class MdDialog {
     width: `${number}px` | `${number}rem` | "min-content" = "min-content"
   ) {
     const dialog = document.createElement("dialog") as HTMLDialogElement;
-    const className = `md-dialog transition ease-in-out`;
+    const className = `bg-surface-container-high text-on-surface elevation-3 p-6 rounded-[28px] transition ease-in-out`;
     dialog.style.width = width;
     dialog.style.minWidth = "300px";
     document.body.appendChild(dialog);
@@ -255,7 +255,8 @@ export class MdDialog {
     iconColor: ICON_COLOR = "text-primary"
   ) {
     const span = document.createElement("span");
-    span.className = `font-['Material_Symbols_Outlined'] flex self-center text-sm`;
+    span.style.fontFamily = "Material Symbols Outlined";
+    span.className = `flex self-center text-sm`;
     span.classList.add(iconColor);
     span.innerText = innerText;
     element.prepend(span);

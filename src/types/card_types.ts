@@ -1,6 +1,6 @@
 export const MdCardType = [
-  'md-card-elevated',
-  'md-card-filled',
-  'md-card-outlined',
+  "md-card-elevated",
+  "md-card-filled",
+  "md-card-outlined",
 ] as const;
-export type HubCardType = (typeof MdCardType)[number];
+export type MdCardType = (typeof MdCardType)[number];

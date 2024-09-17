@@ -1,2 +1,2 @@
-export const MdCheckboxType = ['md-checkbox'] as const;
-export type HubCheckboxType = (typeof MdCheckboxType)[number];
+export const MdCheckboxType = ["md-checkbox"] as const;
+export type MdCheckboxType = (typeof MdCheckboxType)[number];
