@@ -39,35 +39,75 @@
 }
 
 .md-fab {
-  @apply p-4 h-14 min-w-14 md-fab-small;
+  @apply bg-surface-container-high elevation-3 rounded-xl flex items-center h-14 min-w-14
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[24px] text-primary p-4
+  hover:bg-surface-container-highest hover:elevation-4
+  focus:bg-surface-container-highest focus:elevation-4
+  active:bg-surface-container-high;
 }
 
 .md-fab-primary {
-  @apply p-4 h-14 min-w-14 md-fab-small-primary;
+  @apply bg-primary-container elevation-3 rounded-xl flex items-center h-14 min-w-14
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[24px] text-on-primary-container p-4
+  hover:bg-primary-container/90 hover:elevation-4
+  focus:bg-primary-container/95 focus:elevation-4
+  active:bg-primary-container;
 }
 
 .md-fab-secondary {
-  @apply p-4 h-14 min-w-14 md-fab-small-secondary;
+  @apply bg-secondary-container elevation-3 rounded-xl flex items-center h-14 min-w-14
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[24px] text-on-secondary-container p-4
+  hover:bg-secondary-container/90 hover:elevation-4
+  focus:bg-secondary-container/95 focus:elevation-4
+  active:bg-secondary-container;
 }
 
 .md-fab-tertiary {
-  @apply p-4 h-14 min-w-14 md-fab-small-tertiary;
+  @apply bg-tertiary-container elevation-3 rounded-xl flex items-center h-14 min-w-14
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[24px] text-on-tertiary-container p-4
+  hover:bg-tertiary-container/90 hover:elevation-4
+  focus:bg-tertiary-container/95 focus:elevation-4
+  active:bg-tertiary-container;
 }
 
 .md-fab-large {
-  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small;
+  @apply bg-surface-container-high elevation-3 rounded-xl flex items-center h-24 min-w-24
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[36px] text-primary p-4
+  hover:bg-surface-container-highest hover:elevation-4
+  focus:bg-surface-container-highest focus:elevation-4
+  active:bg-surface-container-high;
 }
 
 .md-fab-large-primary {
-  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small-primary;
+  @apply bg-primary-container elevation-3 rounded-xl flex items-center h-24 min-w-24
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[36px] text-on-primary-container p-[30px]
+  hover:bg-primary-container/90 hover:elevation-4
+  focus:bg-primary-container/95 focus:elevation-4
+  active:bg-primary-container
 }
 
 .md-fab-large-secondary {
-  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small-secondary;
+  @apply bg-secondary-container elevation-3 rounded-xl flex items-center h-24 min-w-24
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[36px] text-on-secondary-container p-[30px]
+  hover:bg-secondary-container/90 hover:elevation-4
+  focus:bg-secondary-container/95 focus:elevation-4
+  active:bg-secondary-container;
 }
 
 .md-fab-large-tertiary {
-  @apply p-[30px] text-[36px] h-24 min-w-24 md-fab-small-tertiary;
+  @apply bg-tertiary-container elevation-3 rounded-xl flex h-24 min-w-24
+  after:content-[attr(right-label)] before:content-[attr(left-label)]
+  font-['Material_Symbols_Outlined'] text-[36px] text-on-tertiary-container p-[30px]
+  hover:bg-tertiary-container/90 hover:elevation-4
+  focus:bg-tertiary-container/95 focus:elevation-4
+  active:bg-tertiary-container;
 }
 
 .md-fab-small[left-label]::before {
