@@ -102,7 +102,7 @@
 }
 
 .md-fab-large-tertiary {
-  @apply bg-tertiary-container elevation-3 rounded-xl flex h-24 min-w-24
+  @apply bg-tertiary-container elevation-3 rounded-xl items-center flex h-24 min-w-24
   after:content-[attr(right-label)] before:content-[attr(left-label)]
   font-['Material_Symbols_Outlined'] text-[36px] text-on-tertiary-container p-[30px]
   hover:bg-tertiary-container/90 hover:elevation-4
