@@ -79,7 +79,12 @@
 }
 
 .md-cicle-progress-indeterminate {
-  @apply md-cicle-progress;
+  @apply flex justify-center items-center w-12 h-12 rounded-full appearance-none;
+  
+  --md-sys-progress-circle-background-color: var(--md-sys-color-background);
+  --md-sys-progress-circle-color: var(--md-sys-color-primary);
+  --md-sys-progress-circle-track-color: var(--md-sys-color-secondary-container);
+
   background: 
     radial-gradient(closest-side, rgb(var(--md-sys-progress-circle-background-color)) 79%, transparent 80% 100%),
     conic-gradient(rgb(var(--md-sys-progress-circle-color)) calc(var(--md-sys-progress-circle-value) * 1%), transparent 0);
@@ -87,8 +92,7 @@
   animation:spin 4s infinite;
 }
 
-@keyframes spin { 
-
+@keyframes spin {
   0% {
     transform: rotate(360deg); 
     --md-sys-progress-circle-value: 5;
