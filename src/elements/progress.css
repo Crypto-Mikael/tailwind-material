@@ -79,7 +79,7 @@
 }
 
 .md-cicle-progress-indeterminate {
-  @apply flex justify-center items-center w-12 h-12 rounded-full appearance-none;
+  @apply animate-spin flex justify-center items-center w-12 h-12 rounded-full appearance-none;
   
   --md-sys-progress-circle-background-color: var(--md-sys-color-background);
   --md-sys-progress-circle-color: var(--md-sys-color-primary);
@@ -87,29 +87,17 @@
 
   background: 
     radial-gradient(closest-side, rgb(var(--md-sys-progress-circle-background-color)) 79%, transparent 80% 100%),
-    conic-gradient(rgb(var(--md-sys-progress-circle-color)) calc(var(--md-sys-progress-circle-value) * 1%), transparent 0);
-  
-  animation:spin 4s infinite;
+    conic-gradient(rgb(var(--md-sys-progress-circle-color)) calc(20 * 1%), transparent 0);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(360deg); 
-    --md-sys-progress-circle-value: 5;
-  }
+.md-cicle-progress-indeterminate-fixed {
+  @apply fixed left-1/2 animate-spin flex justify-center items-center w-12 h-12 rounded-full appearance-none;
+  
+  --md-sys-progress-circle-background-color: var(--md-sys-color-background);
+  --md-sys-progress-circle-color: var(--md-sys-color-primary);
+  --md-sys-progress-circle-track-color: var(--md-sys-color-secondary-container);
 
-  30% {
-    transform: rotate(-360deg); 
-    --md-sys-progress-circle-value: 45;
-  }
-
-  60% {
-    transform: rotate(360deg); 
-    --md-sys-progress-circle-value: 25;
-  }
-
-  100% { 
-    transform: rotate(-360deg); 
-    --md-sys-progress-circle-value: 5;
-  }
+  background: 
+    radial-gradient(closest-side, rgb(var(--md-sys-progress-circle-background-color)) 79%, transparent 80% 100%),
+    conic-gradient(rgb(var(--md-sys-progress-circle-color)) calc(20 * 1%), transparent 0);
 }

@@ -194,11 +194,25 @@ export class MdDialog {
     dialog.style.display = "flex";
     dialog.style.flexDirection = "column";
     dialog.style.justifyContent = "space-between";
+    dialog.style.padding = "1rem";
+    dialog.style.borderRadius = "0.75rem";
+    dialog.style.backgroundColor = "rgb(var(--md-sys-color-surface))";
+
     const div = document.createElement("div");
-    div.className = "flex flex-col gap-4 grow items-center";
+
+    div.style.display = "flex";
+    div.style.flexDirection = "column";
+    div.style.gap = "1rem";
+    div.style.flexGrow = "1";
+    div.style.alignItems = "center";
+
     dialog.appendChild(div);
     const div2 = document.createElement("div");
-    div2.className = "flex flex-col grow items-center w-max";
+    div2.style.display = "flex";
+    div2.style.flexDirection = "column";
+    div2.style.flexGrow = "1";
+    div2.style.alignItems = "center";
+    div.style.width = "max-content";
     div.appendChild(div2);
     const header = this.apppendHeaderElement(div2);
     this.apppendHeadingElement(header, props.title);
@@ -214,11 +228,13 @@ export class MdDialog {
     width: `${number}px` | `${number}rem` | "min-content" = "min-content"
   ) {
     const dialog = document.createElement("dialog") as HTMLDialogElement;
-    const className = `bg-surface-container-high text-on-surface elevation-3 p-6 rounded-[28px] transition ease-in-out`;
+    dialog.style.background = "rgb(var(--md-sys-color-surface-container-high))";
+    dialog.style.color = "rgb(var(--md-sys-color-on-surface))";
     dialog.style.width = width;
     dialog.style.minWidth = "300px";
+    dialog.style.boxShadow =
+      "0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30)";
     document.body.appendChild(dialog);
-    dialog.className = className;
     return dialog;
   }
 
@@ -256,7 +272,14 @@ export class MdDialog {
   ) {
     const span = document.createElement("span");
     span.style.fontFamily = "Material Symbols Outlined";
-    span.className = `flex self-center text-sm`;
+    span.style.display = "flex";
+    span.style.alignSelf = "center";
+    if (iconColor === "text-primary") {
+      span.style.color = "rgb(var(--md-sys-color-primary))";
+    }
+    if (iconColor === "text-error") {
+      span.style.color = "rgb(var(--md-sys-color-error))";
+    }
     span.classList.add(iconColor);
     span.innerText = innerText;
     element.prepend(span);
