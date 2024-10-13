@@ -10,7 +10,7 @@
     after:bottom-2
     after:text-on-surface
     after:text-base
-    after:content-[attr(label)] after:font-Inter;
+    after:content-[attr(label)] after:font-inter;
     transition: background 0.2s linear;
   }
 
