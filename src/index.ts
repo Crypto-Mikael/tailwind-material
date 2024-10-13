@@ -67,7 +67,8 @@ export default plugin.withOptions<CorePaletteColorsInHex>(
     return {
       theme: {
         fontFamily: {
-          Inter: ["Inter", "sans-serif"],
+          inter: ["Inter", "sans-serif"],
+          material: ['"Material Symbols Outlined"'],
         },
         colors: palette(
           corePaletteColorsFromCorePaletteColorsInHex(
