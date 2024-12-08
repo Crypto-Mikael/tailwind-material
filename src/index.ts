@@ -32,7 +32,7 @@ const corePaletteColorsFromCorePaletteColorsInHex = (
   );
 };
 
-export default plugin.withOptions<CorePaletteColorsInHex>(
+export const material = plugin.withOptions<CorePaletteColorsInHex>(
   (colors) =>
     ({ addComponents, addBase, addUtilities }) => {
       addBase({
@@ -80,5 +80,6 @@ export default plugin.withOptions<CorePaletteColorsInHex>(
   }
 );
 
+export default material;
 export * from "./types";
 export * from "./utils";
