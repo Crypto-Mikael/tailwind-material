@@ -1,154 +1,90 @@
 .md-fab-small {
-  @apply 
-  bg-surface-container-high elevation-3 rounded-xl flex items-center h-10 min-w-10
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-primary p-2
-  hover:bg-surface-container-highest hover:elevation-4
-  focus:bg-surface-container-highest focus:elevation-4
-  active:bg-surface-container-high;
+	@apply elevation-3 flex h-10 min-w-10 items-center rounded-2xl bg-surface-container-high p-2 font-['Material_Symbols_Outlined'] text-[24px] text-primary hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-surface-container-highest focus:bg-surface-container-highest active:bg-surface-container-high;
 }
 
 .md-fab-small-primary {
-  @apply 
-  bg-primary-container elevation-3 rounded-xl flex items-center h-10 min-w-10
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-on-primary-container p-2
-  hover:bg-primary-container/90 hover:elevation-4
-  focus:bg-primary-container/95 focus:elevation-4
-  active:bg-primary-container;
+	@apply elevation-3 flex h-10 min-w-10 items-center rounded-2xl bg-primary-container p-2 font-['Material_Symbols_Outlined'] text-[24px] text-on-primary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-primary-container/90 focus:bg-primary-container/95 active:bg-primary-container;
 }
 
 .md-fab-small-secondary {
-  @apply 
-  bg-secondary-container elevation-3 rounded-xl flex items-center h-10 min-w-10
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-on-secondary-container p-2
-  hover:bg-secondary-container/90 hover:elevation-4
-  focus:bg-secondary-container/95 focus:elevation-4
-  active:bg-secondary-container;
+	@apply elevation-3 flex h-10 min-w-10 items-center rounded-2xl bg-secondary-container p-2 font-['Material_Symbols_Outlined'] text-[24px] text-on-secondary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-secondary-container/90 focus:bg-secondary-container/95 active:bg-secondary-container;
 }
 
 .md-fab-small-tertiary {
-  @apply 
-  bg-tertiary-container elevation-3 rounded-xl flex items-center h-10 min-w-10
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-on-tertiary-container p-2
-  hover:bg-tertiary-container/90 hover:elevation-4
-  focus:bg-tertiary-container/95 focus:elevation-4
-  active:bg-tertiary-container;
+	@apply elevation-3 flex h-10 min-w-10 items-center rounded-2xl bg-tertiary-container p-2 font-['Material_Symbols_Outlined'] text-[24px] text-on-tertiary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-tertiary-container/90 focus:bg-tertiary-container/95 active:bg-tertiary-container;
 }
 
 .md-fab {
-  @apply bg-surface-container-high elevation-3 rounded-xl flex items-center h-14 min-w-14
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-primary p-4
-  hover:bg-surface-container-highest hover:elevation-4
-  focus:bg-surface-container-highest focus:elevation-4
-  active:bg-surface-container-high;
+	@apply elevation-3 flex h-14 min-w-14 items-center rounded-2xl bg-surface-container-high p-4 font-['Material_Symbols_Outlined'] text-[24px] text-primary hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-surface-container-highest focus:bg-surface-container-highest active:bg-surface-container-high;
 }
 
 .md-fab-primary {
-  @apply bg-primary-container elevation-3 rounded-xl flex items-center h-14 min-w-14
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-on-primary-container p-4
-  hover:bg-primary-container/90 hover:elevation-4
-  focus:bg-primary-container/95 focus:elevation-4
-  active:bg-primary-container;
+	@apply elevation-3 flex h-14 min-w-14 items-center rounded-2xl bg-primary-container p-4 font-['Material_Symbols_Outlined'] text-[24px] text-on-primary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-primary-container/90 focus:bg-primary-container/95 active:bg-primary-container;
 }
 
 .md-fab-secondary {
-  @apply bg-secondary-container elevation-3 rounded-xl flex items-center h-14 min-w-14
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-on-secondary-container p-4
-  hover:bg-secondary-container/90 hover:elevation-4
-  focus:bg-secondary-container/95 focus:elevation-4
-  active:bg-secondary-container;
+	@apply elevation-3 flex h-14 min-w-14 items-center rounded-2xl bg-secondary-container p-4 font-['Material_Symbols_Outlined'] text-[24px] text-on-secondary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-secondary-container/90 focus:bg-secondary-container/95 active:bg-secondary-container;
 }
 
 .md-fab-tertiary {
-  @apply bg-tertiary-container elevation-3 rounded-xl flex items-center h-14 min-w-14
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[24px] text-on-tertiary-container p-4
-  hover:bg-tertiary-container/90 hover:elevation-4
-  focus:bg-tertiary-container/95 focus:elevation-4
-  active:bg-tertiary-container;
+	@apply elevation-3 flex h-14 min-w-14 items-center rounded-2xl bg-tertiary-container p-4 font-['Material_Symbols_Outlined'] text-[24px] text-on-tertiary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-tertiary-container/90 focus:bg-tertiary-container/95 active:bg-tertiary-container;
 }
 
 .md-fab-large {
-  @apply bg-surface-container-high elevation-3 rounded-xl flex items-center h-24 min-w-24
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[36px] text-primary p-[30px]
-  hover:bg-surface-container-highest hover:elevation-4
-  focus:bg-surface-container-highest focus:elevation-4
-  active:bg-surface-container-high;
+	@apply elevation-3 flex h-24 min-w-24 items-center rounded-2xl bg-surface-container-high p-[30px] font-['Material_Symbols_Outlined'] text-[36px] text-primary hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-surface-container-highest focus:bg-surface-container-highest active:bg-surface-container-high;
 }
 
 .md-fab-large-primary {
-  @apply bg-primary-container elevation-3 rounded-xl flex items-center h-24 min-w-24
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[36px] text-on-primary-container p-[30px]
-  hover:bg-primary-container/90 hover:elevation-4
-  focus:bg-primary-container/95 focus:elevation-4
-  active:bg-primary-container;
+	@apply elevation-3 flex h-24 min-w-24 items-center rounded-2xl bg-primary-container p-[30px] font-['Material_Symbols_Outlined'] text-[36px] text-on-primary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-primary-container/90 focus:bg-primary-container/95 active:bg-primary-container;
 }
 
 .md-fab-large-secondary {
-  @apply bg-secondary-container elevation-3 rounded-xl flex items-center h-24 min-w-24
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[36px] text-on-secondary-container p-[30px]
-  hover:bg-secondary-container/90 hover:elevation-4
-  focus:bg-secondary-container/95 focus:elevation-4
-  active:bg-secondary-container;
+	@apply elevation-3 flex h-24 min-w-24 items-center rounded-2xl bg-secondary-container p-[30px] font-['Material_Symbols_Outlined'] text-[36px] text-on-secondary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-secondary-container/90 focus:bg-secondary-container/95 active:bg-secondary-container;
 }
 
 .md-fab-large-tertiary {
-  @apply bg-tertiary-container elevation-3 rounded-xl items-center flex h-24 min-w-24
-  after:content-[attr(right-label)] before:content-[attr(left-label)]
-  font-['Material_Symbols_Outlined'] text-[36px] text-on-tertiary-container p-[30px]
-  hover:bg-tertiary-container/90 hover:elevation-4
-  focus:bg-tertiary-container/95 focus:elevation-4
-  active:bg-tertiary-container;
+	@apply elevation-3 flex h-24 min-w-24 items-center rounded-2xl bg-tertiary-container p-[30px] font-['Material_Symbols_Outlined'] text-[36px] text-on-tertiary-container hover:elevation-4 focus:elevation-4 before:content-[attr(left-label)] after:content-[attr(right-label)] hover:bg-tertiary-container/90 focus:bg-tertiary-container/95 active:bg-tertiary-container;
 }
 
 .md-fab-small[left-label]::before {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1 w-auto;
-  font-family: 'Inter';
+	@apply w-auto pl-1 pr-3 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	font-family: 'Inter';
 }
- 
+
 .md-fab-small[right-label]::after {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
-  font-family: 'Inter';
+	@apply pl-3 pr-1 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	font-family: 'Inter';
 }
 
 .md-fab-small-primary[left-label]::before {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1;
-  ::before {
-    @apply before:pr-3
-  }
-  font-family: 'Inter';
+	@apply pl-1 pr-3 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	::before {
+		@apply before:pr-3;
+	}
+	font-family: 'Inter';
 }
 
 .md-fab-small-primary[right-label]::after {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
-  font-family: 'Inter';
+	@apply pl-3 pr-1 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	font-family: 'Inter';
 }
 
 .md-fab-small-secondary[left-label]::before {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1;
-  font-family: 'Inter';
+	@apply pl-1 pr-3 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	font-family: 'Inter';
 }
 
 .md-fab-small-secondary[right-label]::after {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
-  font-family: 'Inter';
+	@apply pl-3 pr-1 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	font-family: 'Inter';
 }
 
 .md-fab-small-tertiary[left-label]::before {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pr-3 pl-1;
-  font-family: 'Inter';
+	@apply pl-1 pr-3 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	font-family: 'Inter';
 }
 
 .md-fab-small-tertiary[right-label]::after {
-  @apply text-sm not-italic font-medium leading-5 tracking-[0.1px] pl-3 pr-1;
-  font-family: 'Inter';
+	@apply pl-3 pr-1 text-sm font-medium not-italic leading-5 tracking-[0.1px];
+	font-family: 'Inter';
 }
