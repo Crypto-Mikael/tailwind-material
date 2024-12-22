@@ -48,9 +48,9 @@ export const material = plugin.withOptions<CorePaletteColorsInHex>(
 					)
 				},
 				html: {
-					background: 'rgb(var(--md-sys-color-surface))',
+					background: 'rgb(var(--md-sys-color-background))',
 					transition: 'background 0.2s linear',
-					color: 'rgb(var(--md-sys-color-on-surface))'
+					color: 'rgb(var(--md-sys-color-on-background))'
 				}
 			}),
 				addComponents(elements);
