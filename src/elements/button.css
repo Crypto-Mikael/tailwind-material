@@ -23,15 +23,19 @@
 }
 
 .md-button {
-  @apply
-    px-6 py-[10px] border-outline tracking-[0.1px] rounded-[100px]
-    inline-flex flex-row justify-center items-center gap-2
-    text-primary text-center text-sm not-italic font-medium leading-5
-    enabled:hover:bg-primary/[0.08]
-    enabled:active:bg-primary/[0.12]
-    after:content-[attr(right-icon)] before:content-[attr(left-icon)] after:font-['Material_Symbols_Outlined'] after:text-lg before:text-lg before:font-['Material_Symbols_Outlined']
-    after:-mr-2 before:-ml-2
-    disabled:border-on-surface/[0.12] disabled:bg-opacity-[0.12] disabled:text-on-surface/[0.38] disabled:pointer-events-none;
+  @apply 
+	px-6 py-[10px] 
+	tracking-[0.1px] rounded-3xl
+	text-primary text-sm font-medium
+	select-none
+	hover:cursor-pointer
+	hover:bg-primary/[0.08]
+	active:bg-primary/[0.12]
+	disabled:border-on-surface/[0.12] 
+	disabled:bg-opacity-[0.12] 
+	disabled:text-on-surface/[0.38] 
+	disabled:cursor-not-allowed 
+	disabled:pointer-events-none;
 }
 
 .md-button-elevated {
