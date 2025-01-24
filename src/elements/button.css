@@ -1,25 +1,33 @@
 .md-button-filled {
-  @apply
-    bg-primary px-6 py-[10px] tracking-[0.1px] rounded-[100px]
-    inline-flex flex-row justify-center items-center gap-2
-    text-on-primary text-center text-sm not-italic font-medium leading-5
-    hover:opacity-90 hover:elevation-1
-    active:opacity-100 active:elevation-0
-    after:content-[attr(right-icon)] before:content-[attr(left-icon)] after:font-['Material_Symbols_Outlined'] after:text-lg before:text-lg before:font-['Material_Symbols_Outlined']
-    after:-mr-2 before:-ml-2
-    disabled:bg-on-surface/[0.12] disabled:border-on-surface/[0.12] disabled:text-on-surface/[0.38] disabled:pointer-events-none;;
+  @apply 
+  bg-primary 
+  px-6 py-[10px] rounded-3xl
+	text-on-primary text-center text-sm font-medium leading-5
+	hover:opacity-90 
+  hover:elevation-1
+	select-none
+	cursor-pointer
+	active:opacity-100 active:elevation-0
+	disabled:bg-on-surface/[0.12] 
+	disabled:border-on-surface/[0.12] 
+	disabled:text-on-surface/[0.38] 
+	disabled:pointer-events-none;
 }
 
 .md-button-outlined {
-  @apply
-    px-6 py-[10px] border-[1px] border-outline tracking-[0.1px] rounded-[100px]
-    inline-flex flex-row justify-center items-center gap-2
-    text-primary text-center text-sm not-italic font-medium leading-5
-    enabled:hover:bg-primary/[0.08]
-    enabled:active:bg-primary/[0.12]
-    after:content-[attr(right-icon)] before:content-[attr(left-icon)] after:font-['Material_Symbols_Outlined'] after:text-lg before:text-lg before:font-['Material_Symbols_Outlined']
-    after:-mr-2 before:-ml-2
-    disabled:border-on-surface/[0.12] disabled:bg-opacity-[0.12] disabled:text-on-surface/[0.38] disabled:pointer-events-none;
+  @apply 
+  px-6 py-[10px] 
+  border-[1px] border-outline 
+  rounded-3xl
+	text-primary text-sm font-medium
+	cursor-pointer
+	select-none
+	hover:bg-primary/[0.08]
+	active:bg-primary/[0.12]
+	disabled:border-on-surface/[0.12] 
+  disabled:bg-opacity-[0.12] 
+  disabled:text-on-surface/[0.38] 
+  disabled:pointer-events-none;
 }
 
 .md-button {
@@ -39,55 +47,63 @@
 }
 
 .md-button-elevated {
-  @apply
-    px-6 py-[10px] border-outline tracking-[0.1px] rounded-[100px] enabled:elevation-1 bg-gradient-to-b from-surface/[0.05] to-surface/[0.05] 
-    inline-flex flex-row justify-center items-center gap-2
-    text-primary text-center text-sm not-italic font-medium leading-5
-    enabled:hover:bg-primary/[0.08] enabled:hover:elevation-2
-    enabled:active:bg-primary/[0.12] enabled:active:elevation-1
-    after:content-[attr(right-icon)] before:content-[attr(left-icon)] after:font-['Material_Symbols_Outlined'] after:text-lg before:text-lg before:font-['Material_Symbols_Outlined']
-    after:-mr-2 before:-ml-2
-    disabled:bg-on-surface/[0.12] disabled:border-on-surface/[0.12] disabled:text-on-surface/[0.38] disabled:pointer-events-none;
+  @apply px-6 py-[10px] border-outline rounded-3xl [&:not(:disabled)]:elevation-1
+	text-primary text-center text-sm font-medium
+	select-none
+	cursor-pointer
+	disabled:bg-on-surface/[0.12] 
+	disabled:border-on-surface/[0.12] 
+	disabled:text-on-surface/[0.38] 
+	disabled:pointer-events-none 
+	hover:bg-primary/[0.08]
+	active:bg-primary/[0.12] 
 }
 
 .md-button-tonal {
-  @apply
-  px-6 py-[10px] border-outline bg-secondary-container tracking-[0.1px] rounded-[100px] 
-  inline-flex flex-row justify-center items-center gap-2
-  text-on-secondary-container text-center text-sm not-italic font-medium leading-5
-  enabled:hover:bg-secondary-container enabled:hover:elevation-1
-  enabled:active:bg-secondary-container enabled:active:elevation-0
-  after:content-[attr(right-icon)] before:content-[attr(left-icon)] after:font-['Material_Symbols_Outlined'] after:text-lg before:text-lg before:font-['Material_Symbols_Outlined']
-  after:-mr-2 before:-ml-2
-  disabled:bg-on-surface/[0.12] disabled:border-on-surface/[0.12] disabled:text-on-surface/[0.38] disabled:pointer-events-none;
+  @apply  
+  px-6 py-[10px] border-outline bg-secondary-container rounded-3xl
+  text-on-secondary-container text-center text-sm font-medium leading-5
+  hover:bg-secondary-container
+  active:opacity-70
+	select-none
+	cursor-pointer
+  disabled:bg-on-surface/[0.12] 
+	disabled:border-on-surface/[0.12] 
+	disabled:text-on-surface/[0.38] 
+	disabled:pointer-events-none;
 }
 
 .md-icon-button {
   @apply
   w-[42px] h-[42px] flex items-center justify-center
-  font-['Material_Symbols_Outlined'] text-[24px] rounded-full p-2
-  enabled:hover:bg-surface-variant/[0.08]
-  enabled:active:bg-surface-variant/[0.18]
-  enabled:text-on-surface-variant icon-unfilled
-  disabled:text-on-surface/[0.38] disabled:cursor-not-allowed;
+  font-material text-[24px] rounded-full p-2
+  hover:bg-surface-variant/[0.08]
+  active:bg-surface-variant/[0.18]
+	cursor-pointer
+	select-none
+  text-on-surface-variant icon-unfilled
+  disabled:text-on-surface/[0.38] disabled:pointer-events-none;
 }
 
 .md-icon-button-filled {
-  @apply
-  w-[42px] h-[42px] flex items-center justify-center
-  font-['Material_Symbols_Outlined'] text-[24px] rounded-full p-2
-  enabled:bg-primary enabled:text-on-primary
-  enabled:active:bg-primary/[0.80] enabled:active:text-on-primary/[0.95]
-  disabled:bg-on-surface/[0.12] disabled:text-on-surface/[0.38] disabled:cursor-not-allowed;
+  @apply w-[42px] h-[42px] flex items-center justify-center
+  font-material text-[24px] rounded-full p-2
+  bg-primary text-on-primary
+	select-none
+	cursor-pointer
+  active:bg-primary/[0.80] active:text-on-primary/[0.95]
+  disabled:bg-on-surface/[0.12] disabled:text-on-surface/[0.38] disabled:pointer-events-none;
 }
 
 .md-icon-button-tonal {
   @apply
   w-[42px] h-[42px] flex items-center justify-center
   font-['Material_Symbols_Outlined'] text-[24px] rounded-full p-2
-  enabled:bg-secondary-container enabled:text-on-secondary-container
-  enabled:hover:bg-secondary-container/80
-  enabled:active:bg-secondary-container/70
+  bg-secondary-container text-on-secondary-container
+  hover:bg-secondary-container/80
+  active:bg-secondary-container/70
+  cursor-pointer
+	select-none
   disabled:bg-on-surface/[0.12] disabled:text-on-surface/[0.38];
 }
 
@@ -95,9 +111,11 @@
   @apply
   w-[42px] h-[42px] flex items-center justify-center
   font-['Material_Symbols_Outlined'] text-[24px] rounded-[100px] p-2
-  enabled:border-outline border-solid border-[1px] enabled:text-on-secondary-container
-  enabled:hover:bg-on-surface-variant/[0.08]
-  enabled:active:bg-on-surface-variant/[0.12]
+  border-outline border-solid border-[1px] text-on-secondary-container
+  hover:bg-on-surface-variant/[0.08]
+  active:bg-on-surface-variant/[0.12]
+  cursor-pointer
+	select-none
   disabled:border-outline/[0.12] disabled:text-on-surface/[0.12] disabled:cursor-not-allowed
 }
 
