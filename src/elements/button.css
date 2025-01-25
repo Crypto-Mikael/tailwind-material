@@ -104,6 +104,7 @@
   active:bg-secondary-container/70
   cursor-pointer
 	select-none
+	disabled:pointer-events-none
   disabled:bg-on-surface/[0.12] disabled:text-on-surface/[0.38];
 }
 
@@ -130,7 +131,7 @@
   border-outline border-solid border-[1px] text-on-secondary-container
   hover:bg-on-surface-variant/[0.08]
   active:bg-on-surface-variant/[0.12]
-  pointer-events-none
+  disabled:pointer-events-none
   cursor-pointer
 	select-none
   disabled:border-outline/[0.12] disabled:text-on-surface/[0.12] disabled:cursor-not-allowed
