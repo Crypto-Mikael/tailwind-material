@@ -98,13 +98,29 @@
 .md-icon-button-tonal {
   @apply
   w-[42px] h-[42px] flex items-center justify-center
-  font-['Material_Symbols_Outlined'] text-[24px] rounded-full p-2
+  font-material text-[24px] rounded-full p-2
   bg-secondary-container text-on-secondary-container
   hover:bg-secondary-container/80
   active:bg-secondary-container/70
   cursor-pointer
 	select-none
   disabled:bg-on-surface/[0.12] disabled:text-on-surface/[0.38];
+}
+
+.md-icon-button-elevated {
+  @apply w-[42px] h-[42px] flex items-center justify-center
+	text-primary text-center text-sm font-medium
+	font-material text-[24px] rounded-full p-2  px-6 py-[10px] 
+	border-outline 
+	[&:not(:disabled)]:elevation-1
+	select-none
+	cursor-pointer
+	disabled:bg-on-surface/[0.12] 
+	disabled:border-on-surface/[0.12] 
+	disabled:text-on-surface/[0.38] 
+	disabled:pointer-events-none 
+	hover:bg-primary/[0.08]
+	active:bg-primary/[0.12] 
 }
 
 .md-icon-button-outlined {
@@ -114,6 +130,7 @@
   border-outline border-solid border-[1px] text-on-secondary-container
   hover:bg-on-surface-variant/[0.08]
   active:bg-on-surface-variant/[0.12]
+  pointer-events-none
   cursor-pointer
 	select-none
   disabled:border-outline/[0.12] disabled:text-on-surface/[0.12] disabled:cursor-not-allowed
